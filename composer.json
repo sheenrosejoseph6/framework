@@ -1,0 +1,15 @@
+{
+    "name": "jboho/framework"
+  , "description": "A CSS framework"
+  , "keywords": ["css", "framework"]
+  , "homepage": "https://github.com/jboho/framework"
+  , "bootstrap-authors": [
+      {
+        "name": "Jonathan Boho",
+        "email": "bohojk@gmail.com"
+      }
+    ]
+  ,"support": {
+      "issues": "https://github.com/jboho/framework"
+    }
+}
