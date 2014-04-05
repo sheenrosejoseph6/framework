@@ -28,40 +28,6 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
-    jshint: {
-      options: {
-        jshintrc: 'js/.jshintrc'
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      src: {
-        src: ['js/*.js']
-      },
-      assets: {
-        src: ['docs/assets/js/application.js']
-      }
-    },
-
-    jscs: {
-      options: {
-        config: 'js/.jscsrc'
-      },
-      grunt: {
-        options: {
-          requireCamelCaseOrUpperCaseIdentifiers: null,
-          requireParenthesesAroundIIFE: true
-        },
-        src: '<%= jshint.grunt.src %>'
-      },
-      src: {
-        src: '<%= jshint.src.src %>'
-      },
-      assets: {
-        src: '<%= jshint.assets.src %>'
-      }
-    },
-
     less: {
       compileCore: {
         options: {
@@ -93,10 +59,7 @@ module.exports = function (grunt) {
         options: {
           map: true
         },
-        src: 'dist/css/<%= pkg.name %>.css'
-      },
-      docs: {
-        src: 'docs/assets/css/docs.css'
+        src: 'css/framework.css'
       }
     },
 
@@ -141,13 +104,13 @@ module.exports = function (grunt) {
 
     csscomb: {
       options: {
-        config: 'less/.csscomb.json'
+        config: 'sass/.csscomb.json'
       },
       dist: {
         expand: true,
-        cwd: 'dist/css/',
+        cwd: 'css/',
         src: ['*.css', '!*.min.css'],
-        dest: 'dist/css/'
+        dest: 'css/'
       }
     },
 
@@ -176,6 +139,17 @@ module.exports = function (grunt) {
       }
     },
 
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          'css/framework.css': 'scss/framework.scss'
+        }
+      }
+    },
+
     sed: {
       versionNumber: {
         pattern: (function () {
@@ -194,7 +168,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['less:compileCore', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass:dist', 'autoprefixer', 'csscomb']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'dist-css']);
