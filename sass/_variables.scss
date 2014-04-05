@@ -1,0 +1,26 @@
+// Typography
+$base-unit:               1em !default;
+$font-size-base:          1rem !default;
+$line-height-base:        1.6  !default;
+$font-family-base:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-weight-base:        400 !default;
+
+// Colors
+$brand-primary:           #428bca !default;
+$brand-secondary:         #ffbd53 !default;
+$brand-neutral:           #50697f !default;
+
+$text-color:              #333 !default;
+$link-color:              $brand-primary !default;
+$link-hover-color:        darken($link-color, 15%) !default;
+
+// Headings
+$headings-font-weight:    500 !default;   
+$headings-font-family:    inherit !default;
+$headings-line-height:    1.1 !default;
+$font-size-h1:            ($font-size-base * 2.4) !default;
+$font-size-h2:            ($font-size-base * 2.0) !default;
+$font-size-h3:            ($font-size-base * 1.65) !default;
+$font-size-h4:            ($font-size-base * 1.35) !default;
+$font-size-h5:            ($font-size-base * 1.0) !default;
+$font-size-h6:            ($font-size-base * .85) !default;

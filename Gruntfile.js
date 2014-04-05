@@ -145,7 +145,7 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {
-          'css/framework.css': 'scss/framework.scss'
+          'css/framework.css': 'sass/framework.scss'
         }
       }
     },

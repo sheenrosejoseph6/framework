@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  font-weight: $font-weight-base;
+}
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
