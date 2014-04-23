@@ -16,3 +16,4 @@ Icon
 _gh_pages/*
 node_modules/*
 bower.json
+.sass-cache/*
