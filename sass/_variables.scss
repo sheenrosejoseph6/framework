@@ -24,3 +24,8 @@ $font-size-h3:            ($font-size-base * 1.65) !default;
 $font-size-h4:            ($font-size-base * 1.35) !default;
 $font-size-h5:            ($font-size-base * 1.0) !default;
 $font-size-h6:            ($font-size-base * .85) !default;
+
+// Grid
+$grid-gutter-width:       2em;
+$site-min-width:          20em;
+$site-max-width:          80em;

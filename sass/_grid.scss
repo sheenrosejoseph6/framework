@@ -1,0 +1,10 @@
+.wrap {
+  @extend .clearfix;
+  position: relative;
+  padding: 0 ($grid-gutter-width / 2);
+  &.centered {
+    margin: 0 auto;
+    min-width: $site-min-width;
+    max-width: $site-max-width;
+  }
+}

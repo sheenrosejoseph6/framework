@@ -68,11 +68,11 @@ h6 {
   font-size: .85rem;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .wrap:before, .clearfix:after, .wrap:after {
   display: table;
   content: " ";
 }
-.clearfix:after {
+.clearfix:after, .wrap:after {
   clear: both;
 }
 
@@ -124,4 +124,14 @@ h6 {
 
 .antialiased {
   -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  position: relative;
+  padding: 0 1em;
+}
+.wrap.centered {
+  min-width: 20em;
+  max-width: 80em;
+  margin: 0 auto;
 }
